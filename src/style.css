@@ -59,7 +59,9 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
     --bg: #622F1B;
-    --text: #FFFFFF;
+    --btn: #C08552;
+    --maintext: #FFFFFF;
+    --quotebg: #EAD8C0;
 }
 
 html {
@@ -81,7 +83,7 @@ header {
     align-items: center;
     padding: 5px;
     background-color: var(--bg);
-    color: var(--text);
+    color: var(--maintext);
 }
 
 header > div {
@@ -93,21 +95,21 @@ header > div {
 }
 
 header > div > div {
-    font-size: 1.2rem;
+    width: 100px;
+    height: auto;
 }
 
 header > div > nav {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
     gap: 10px;
-    font-size: 1.2rem;
 }
 
 nav > button {
     border: none;
     background: none;
     cursor: pointer;
-    color: var(--text);
+    color: var(--maintext);
 }
 
 nav > button:hover {
@@ -115,20 +117,38 @@ nav > button:hover {
 }
 
 main {
-    width: 1200px;
+    width: 100%;
     height: 100%;
+    justify-items: center;
 }
 
 #content {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
+    grid-template: 1fr 1fr 1fr min-content / 1fr;
+    justify-items: center;
     align-items: center;
-    /* border: 1px solid red; */
+}
+
+/* Headline Section */
+.headlineWrapper {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    background-color: var(--bg);
 }
 
 .headline {
+    width: 1200px;
+    height: 600px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    align-items: center;
+}
+
+.headlineLeft {
     grid-area: 1 / 1 / 2 / 2;
     display: grid;
     grid-template: repeat(3, min-content) / 1fr;
@@ -139,11 +159,15 @@ main {
     width: 15ch;
     font-size: 3.5rem;
     font-weight: 700;
+    color: var(--maintext);
+    cursor: default;
 }
 
 .heroSubText {
     width: 53ch;
     font-size: 1.2rem;
+    color: var(--maintext);
+    cursor: default;
 }
 
 .signUpBtn {
@@ -153,8 +177,8 @@ main {
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: var(--btn);
+    color: var(--maintext);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -162,23 +186,206 @@ main {
     transform: scale(1.05);
 }
 
-.imageDiv {
+.headlineRight {
     grid-area: 1 / 2 / 2 / 3;
-    width: 100%;
-    height: 300px;
-    justify-items: end;
+    width: 90%;
+    height: 50%;
+    justify-self: end;
+    background-image: url(./assets/beetle.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-.homepageImg {
-    width: 95%;
+/* Some Information Section */
+.someInfoWrapper {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    justify-items: center;
+}
+
+.someInfo {
+    width: 1200px;
+    height: 600px;
+    display: grid;
+    grid-template: min-content min-content / 1fr;
+    justify-items: center;
+    align-content: center;
+}
+
+.infoText {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 70px;
+    cursor: default;
+}
+
+.infoContainer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    gap: 50px;
+}
+
+.infoCard {
+    display: grid;
+    grid-template: max-content min-content / 1fr;
+}
+
+.infoCardDiv {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+}
+
+.infoCardOneImg {
+    background-image: url(./assets/coffee.jpg);
+}
+
+.infoCardTwoImg {
+    background-image: url(./assets/snacks.jpg);
+}
+
+.infoCardThreeImg {
+    background-image: url(./assets/vibes.jpg);
+}
+
+.infoCardFourImg {
+    background-image: url(./assets/spot.jpg);
+}
+
+.infoCardText {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #595959;
+    cursor: default;
+}
+
+/* Quote Section */
+.quoteWrapper {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    background-color: var(--quotebg);
+}
+
+.quoteContainer {
+    width: 1200px;
+    height: 600px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+}
+
+.quoteImg {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 80%;
+    height: 60%;
+    justify-self: center;
+    align-self: center;
+    background-image: url(./assets/cars.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.quote {
+    grid-area: 1 / 2 / 2 / 3;
+    align-self: center;
+    font-weight: 300;
+    font-size: 2.2rem;
+    cursor: default;
+}
+
+/* Call to Action Section */
+.callToActionWrapper {
+    grid-area: 4 / 1 / 5 / 2;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    background-color: #C08552;
+}
+
+.callToActionContainer {
+    width: 1200px;
+    height: 300px;
+    justify-items: center;
+    align-content: center;
+}
+
+.callToAction {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template: 1fr / max-content min-content;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #000000;
+    padding-inline: 50px;
+}
+
+.callToActionTextContainer {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(2, min-content) / 1fr;
+    align-content: center;
+
+}
+
+.callToActionMainText {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--maintext);
+}
+
+.callToActionSubText {
+    font-size: 1.3rem;
+    color: var(--maintext);
+}
+
+.callToActionBtnContainer {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / repeat(2, min-content);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.callToActionBtn,
+.contactBtn {
+    width: 150px;
+    padding-block: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.callToActionBtn:hover,
+.contactBtn:hover {
+    transform: scale(1.05);
 }
 
 footer {
+    width: 100%;
+    justify-items: center;
     font-size: 0.9rem;
+    background-color: #C08552;
 }
 
 footer > div > a {
-    color: black;
+    color: #000000;
 }
