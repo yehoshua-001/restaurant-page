@@ -94,9 +94,13 @@ header > div {
     align-items: center;
 }
 
-header > div > div {
+.logo {
     width: 100px;
     height: auto;
+}
+
+.logo:hover {
+    cursor: pointer;
 }
 
 header > div > nav {
@@ -122,17 +126,18 @@ main {
     justify-items: center;
 }
 
-#content {
+.content--home {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template: 1fr 1fr 1fr min-content / 1fr;
     justify-items: center;
     align-items: center;
+    background-color: #622F1B;
 }
 
 /* Headline Section */
-.headlineWrapper {
+.headline-wrapper {
     grid-area: 1 / 1 / 2 / 2;
     width: 100%;
     height: 100%;
@@ -148,14 +153,14 @@ main {
     align-items: center;
 }
 
-.headlineLeft {
+.headline-left {
     grid-area: 1 / 1 / 2 / 2;
     display: grid;
     grid-template: repeat(3, min-content) / 1fr;
     gap: 10px;
 }
 
-.heroText {
+.hero-text {
     width: 15ch;
     font-size: 3.5rem;
     font-weight: 700;
@@ -163,14 +168,14 @@ main {
     cursor: default;
 }
 
-.heroSubText {
-    width: 53ch;
-    font-size: 1.2rem;
+.hero-subtext {
+    width: 60ch;
+    font-size: 1.1rem;
     color: var(--maintext);
     cursor: default;
 }
 
-.signUpBtn {
+.sign-up-btn {
     width: 150px;
     padding-block: 5px;
     font-weight: 700;
@@ -182,11 +187,11 @@ main {
     transition: transform 0.2s ease-in-out;
 }
 
-.signUpBtn:hover {
+.sign-up-btn:hover {
     transform: scale(1.05);
 }
 
-.headlineRight {
+.headline-right {
     grid-area: 1 / 2 / 2 / 3;
     width: 90%;
     height: 50%;
@@ -197,14 +202,15 @@ main {
 }
 
 /* Some Information Section */
-.someInfoWrapper {
+.some-info-wrapper {
     grid-area: 2 / 1 / 3 / 2;
     width: 100%;
     height: 100%;
     justify-items: center;
+    background-color: #FFFFFF;
 }
 
-.someInfo {
+.some-info {
     width: 1200px;
     height: 600px;
     display: grid;
@@ -213,14 +219,14 @@ main {
     align-content: center;
 }
 
-.infoText {
+.info-text {
     font-size: 2rem;
     font-weight: 700;
     padding-bottom: 70px;
     cursor: default;
 }
 
-.infoContainer {
+.info-container {
     width: 100%;
     height: auto;
     display: grid;
@@ -228,35 +234,40 @@ main {
     gap: 50px;
 }
 
-.infoCard {
+.info-card {
     display: grid;
     grid-template: max-content min-content / 1fr;
+    transition: transform 0.2s ease-in-out;
 }
 
-.infoCardDiv {
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.info-card-div {
     width: 100%;
     height: 250px;
     border-radius: 20px;
     background-size: cover;
 }
 
-.infoCardOneImg {
+.info-card-one-img {
     background-image: url(./assets/coffee.jpg);
 }
 
-.infoCardTwoImg {
+.info-card-two-img {
     background-image: url(./assets/snacks.jpg);
 }
 
-.infoCardThreeImg {
+.info-card-three-img {
     background-image: url(./assets/vibes.jpg);
 }
 
-.infoCardFourImg {
+.info-card-four-img {
     background-image: url(./assets/spot.jpg);
 }
 
-.infoCardText {
+.info-card-text {
     margin-top: 10px;
     text-align: center;
     font-size: 1.1rem;
@@ -265,7 +276,7 @@ main {
 }
 
 /* Quote Section */
-.quoteWrapper {
+.quote-wrapper {
     grid-area: 3 / 1 / 4 / 2;
     width: 100%;
     height: 100%;
@@ -273,7 +284,7 @@ main {
     background-color: var(--quotebg);
 }
 
-.quoteContainer {
+.quote-container {
     width: 1200px;
     height: 600px;
     display: grid;
@@ -282,7 +293,7 @@ main {
     align-content: center;
 }
 
-.quoteImg {
+.quote-img {
     grid-area: 1 / 1 / 2 / 2;
     width: 80%;
     height: 60%;
@@ -302,22 +313,22 @@ main {
 }
 
 /* Call to Action Section */
-.callToActionWrapper {
+.call-to-action-wrapper {
     grid-area: 4 / 1 / 5 / 2;
     width: 100%;
     height: 100%;
     justify-items: center;
-    background-color: #C08552;
+    background-color: var(--bg);
 }
 
-.callToActionContainer {
+.call-to-action-container {
     width: 1200px;
     height: 300px;
     justify-items: center;
     align-content: center;
 }
 
-.callToAction {
+.call-to-action {
     width: 100%;
     height: 50%;
     display: grid;
@@ -325,11 +336,11 @@ main {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    background-color: #000000;
+    background-color: var(--btn);
     padding-inline: 50px;
 }
 
-.callToActionTextContainer {
+.call-to-action-text-container {
     grid-area: 1 / 1 / 2 / 2;
     width: 100%;
     height: 100%;
@@ -339,18 +350,18 @@ main {
 
 }
 
-.callToActionMainText {
+.call-to-action-text {
     font-size: 2rem;
     font-weight: 700;
     color: var(--maintext);
 }
 
-.callToActionSubText {
+.call-to-action-subtext {
     font-size: 1.3rem;
     color: var(--maintext);
 }
 
-.callToActionBtnContainer {
+.call-to-action-btn-container {
     grid-area: 1 / 2 / 2 / 3;
     width: 100%;
     height: 100%;
@@ -361,8 +372,8 @@ main {
     align-items: center;
 }
 
-.callToActionBtn,
-.contactBtn {
+.call-to-action-btn,
+.contact-btn {
     width: 150px;
     padding-block: 5px;
     font-weight: 700;
@@ -370,12 +381,12 @@ main {
     border: none;
     border-radius: 10px;
     background-color: #FFFFFF;
-    color: #000000;
+    color: #622F1B;
     transition: transform 0.2s ease-in-out;
 }
 
-.callToActionBtn:hover,
-.contactBtn:hover {
+.call-to-action-btn:hover,
+.contact-btn:hover {
     transform: scale(1.05);
 }
 
@@ -383,7 +394,7 @@ footer {
     width: 100%;
     justify-items: center;
     font-size: 0.9rem;
-    background-color: #C08552;
+    background-color: var(--bg);
 }
 
 footer > div > a {
