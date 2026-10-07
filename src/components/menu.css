@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*
+    Josh's Custom CSS Reset
+    https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*:not(dialog) {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* ------------------------------------------------- */
+
+:root {
+    --bg: #622F1B;
+    --btn: #C08552;
+    --maintext: #FFFFFF;
+    --quotebg: #EAD8C0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100dvh;
+    display: grid;
+    grid-template: min-content 1fr min-content / 1fr;
+    justify-items: center;
+    font-family: Roboto;
+}
+
+header {
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--bg);
+    color: var(--maintext);
+}
+
+header > div {
+    width: 1200px;
+    display: grid;
+    grid-template: 1fr / repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div > div {
+    width: 100px;
+    height: auto;
+}
+
+header > div > div:hover {
+    cursor: pointer;
+}
+
+header > div > nav {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    gap: 10px;
+}
+
+nav > button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--maintext);
+}
+
+nav > button:hover {
+    font-weight: 700;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+}
+
+.content--menu {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #EAD8C0;
+}
