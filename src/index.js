@@ -1,6 +1,6 @@
-import homePage from "./home.js";
-import menuPage from "./menu.js";
-import aboutPage from "./about.js";
+import homePage from "./pages/home.js";
+import menuPage from "./pages/menu.js";
+import aboutPage from "./pages/about.js";
 import tsuperBettleCafeLogo from "./assets/tsuper-beetle-cafe-logo.png";
 
 const content = document.querySelector("#content");
