@@ -130,7 +130,7 @@ main {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template: min-content / 1fr;
+    grid-template: min-content repeat(auto-fit, minmax(200px, 1fr)) / 1fr;
     justify-items: center;
     align-items: center;
 }
@@ -160,10 +160,11 @@ main {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template: 1fr 1fr / 1fr;
-    gap: 50px;
+    grid-template: repeat(2, min-content) / 1fr;
     justify-items: center;
     align-content: center;
+    row-gap: 50px;
+    padding-bottom: 50px;
     background-color: var(--bg);
 }
 
@@ -186,7 +187,7 @@ main {
     grid-area: 1 / 1 / 2 / 2;
     width: 100%;
     height: 100%;
-    background-image: url(../assets/coffee.jpg);
+    background-image: url(../assets/coffee-1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -266,7 +267,7 @@ main {
 .coffee-cold-regular,
 .coffee-cold-large {
     width: 100%;
-    height: 100%;
+    height: 50px;
     text-align: center;
     align-content: center;
     font-size: 1.3rem;
@@ -296,6 +297,13 @@ main {
     font-size: 1.2rem;
 }
 
+.coffee-hot-regular-prices p::before,
+.coffee-hot-large-prices p::before,
+.coffee-cold-regular-prices p::before,
+.coffee-cold-large-prices p::before {
+    content: "\20B1";
+}
+
 /* Special Coffee section */
 .special-container {
     width: 1200px;
@@ -305,7 +313,7 @@ main {
 
 .special-card {
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     display: grid;
     grid-template: 1fr / max-content 20% 1fr;
     justify-items: center;
@@ -399,6 +407,11 @@ main {
     font-size: 1.2rem;
 }
 
+.special-cold-regular-prices p::before,
+.special-cold-large-prices p::before {
+    content: "\20B1";
+}
+
 .special-img {
     grid-area: 1 / 3 / 2 / 4;
     width: 100%;
@@ -409,13 +422,651 @@ main {
     background-repeat: no-repeat;
 }
 
-footer {
+/* Non-coffee section */
+.non-coffee-wrapper {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(2, min-content) / 1fr;
+    justify-items: center;
+    align-content: center;
+    row-gap: 50px;
+    padding-block: 50px;
+    background-color: #FFFFFF;
+}
+
+.non-coffee-container {
+    width: 1200px;
+    height: fit-content;
+    align-content: center;
+}
+
+.non-coffee-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr max-content 20%;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.non-coffee-img {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/non-coffee.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.non-coffee-flavor-card {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr min-content / 1fr;
+    padding-block: 20px;
+    padding-inline: 40px;
+    background-color: #000000;
+    color: #C08552;
+    border: 2px solid #000000;
+}
+
+.non-coffee-header {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    align-content: flex-start;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.non-coffee-flavors {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template: repeat(6, min-content) / 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.non-coffee-size {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: min-content 1fr / 1fr 1fr;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+
+.non-coffee-regular {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.non-coffee-large {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.non-coffee-regular,
+.non-coffee-large {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    align-content: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.non-coffee-regular-prices {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.non-coffee-large-prices {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.non-coffee-regular-prices,
+.non-coffee-large-prices {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.non-coffee-regular-prices p::before,
+.non-coffee-large-prices p::before {
+    content: "\20B1";
+}
+
+/* Matcha section */
+.matcha-container {
+    width: 1200px;
+    height: fit-content;
+    align-content: center;
+}
+
+.matcha-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / max-content 20% 1fr;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.matcha-flavor-card {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr min-content / 1fr;
+    padding-block: 20px;
+    padding-inline: 40px;
+    background-color: #000000;
+    color: #C08552;
+    border: 2px solid #000000;
+}
+
+.matcha-header {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    align-content: flex-start;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.matcha-flavors {
+    display: grid;
+    grid-template: repeat(4, min-content) / 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.matcha-size {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: min-content 1fr / 1fr 1fr;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+
+.matcha-regular {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.matcha-large {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.matcha-regular,
+.matcha-large {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    align-content: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.matcha-regular-prices {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.matcha-large-prices {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.matcha-regular-prices,
+.matcha-large-prices {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.matcha-regular-prices p::before,
+.matcha-large-prices p::before {
+    content: "\20B1";
+}
+
+.matcha-img {
+    grid-area: 1 / 3 / 2 / 4;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/matcha.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Fruit-based section */
+.fruit-based-container {
+    width: 1200px;
+    height: fit-content;
+    align-content: center;
+}
+
+.fruit-based-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr max-content 20%;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.fruit-based-img {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/fruit-based.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fruit-based-flavor-card {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr min-content / 1fr;
+    padding-block: 20px;
+    padding-inline: 40px;
+    background-color: #000000;
+    color: #C08552;
+    border: 2px solid #000000;
+}
+
+.fruit-based-header {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    align-content: flex-start;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.fruit-based-flavors {
+    display: grid;
+    grid-template: repeat(4, min-content) / 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.fruit-based-size {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: min-content 1fr / 1fr 1fr;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+
+.fruit-based-regular {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.fruit-based-large {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.fruit-based-regular,
+.fruit-based-large {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    align-content: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.fruit-based-regular-prices {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.fruit-based-large-prices {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.fruit-based-regular-prices,
+.fruit-based-large-prices {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.fruit-based-regular-prices p::before,
+.fruit-based-large-prices p::before {
+    content: "\20B1";
+}
+
+/* Food section */
+.food-wrapper {
+    grid-area: 4 / 1 / 5 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(3, min-content) / 1fr;
+    justify-items: center;
+    align-content: center;
+    row-gap: 50px;
+    padding-block: 50px;
+    background-color: #EAD8C0;
+}
+
+.snacks-container {
+    width: 1200px;
+    height: fit-content;
+    align-content: center;
+}
+
+.snacks-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / max-content 20% 1fr;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.snacks-item-card {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr min-content / 1fr;
+    padding-block: 20px;
+    padding-inline: 40px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #FFFFFF;
+}
+
+.snacks-header {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    align-content: flex-start;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.snacks {
+    width: 100%;
+    display: grid;
+    grid-template: repeat(3, min-content) / 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.snacks span {
+    font-size: 0.9rem;
+}
+
+.snacks-price-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 60px 1fr / 1fr;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #622F1B;
+    border: 2px solid #622F1B;
+}
+
+.snacks-prices {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+}
+
+.snacks-prices p::before {
+    content: "\20B1";
+}
+
+.snacks-img {
+    grid-area: 1 / 3 / 2 / 4;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/snacks-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Burgers section */
+.burger-container {
+    width: 1200px;
+    height: fit-content;
+    align-content: center;
+}
+
+.burger-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr max-content 20%;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.burger-img {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/burger.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.burger-item-card {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr min-content / 1fr;
+    padding-block: 20px;
+    padding-inline: 40px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #FFFFFF;
+}
+
+.burger-header {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    align-content: flex-start;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.burgers {
+    width: 100%;
+    display: grid;
+    grid-template: repeat(3, min-content) / 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.burger-price-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 60px 1fr / 1fr;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #622F1B;
+    border: 2px solid #622F1B;
+}
+
+.burger-prices {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+}
+
+.burger-prices p::before {
+    content: "\20B1";
+}
+
+/* Meals section */
+.meals-container {
+    width: 1200px;
+    height: fit-content;
+    align-content: center;
+}
+
+.meals-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / max-content 20% 20% 1fr;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.meals-item-card {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr min-content / 1fr;
+    padding-block: 20px;
+    padding-inline: 40px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #FFFFFF;
+}
+
+.meals-header {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    align-content: flex-start;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.meals {
+    width: 100%;
+    display: grid;
+    grid-template: repeat(3, min-content) / 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.meals-price-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 60px 1fr / 1fr;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #622F1B;
+    border: 2px solid #622F1B;
+}
+
+.meals-prices {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+}
+
+.meals-prices p::before {
+    content: "\20B1";
+}
+
+.meal-add-ons-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 60px 1fr / 1fr;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #622F1B;
+    border: 2px solid #622F1B;
+}
+
+.meal-add-ons {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+}
+
+.meal-add-ons span::before {
+    content: "\20B1";
+}
+
+.meals-img {
+    grid-area: 1 / 4 / 2 / 5;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/meals.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer--menu {
     width: 100%;
     justify-items: center;
     font-size: 0.9rem;
-    background-color: var(--bg);
+    background-color: #EAD8C0;
 }
 
-footer > div > a {
+.footer--menu > div > a {
     color: #000000;
 }
