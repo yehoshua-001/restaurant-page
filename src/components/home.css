@@ -395,13 +395,13 @@ main {
     transform: scale(1.05);
 }
 
-footer {
+.footer--home {
     width: 100%;
     justify-items: center;
     font-size: 0.9rem;
     background-color: var(--bg);
 }
 
-footer > div > a {
+.footer--home > div > a {
     color: #000000;
 }
