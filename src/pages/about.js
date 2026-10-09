@@ -6,6 +6,10 @@ const aboutPage = () => {
     content.classList.toggle('content--about');
 
     console.log("ABOUT")
+
+    const footer = document.querySelector("footer");
+    footer.classList.remove('footer--home', 'footer--menu');
+    footer.classList.add('footer--about');
 };
 
 export default aboutPage;
