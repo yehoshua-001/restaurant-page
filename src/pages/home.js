@@ -162,6 +162,10 @@ const homePage = () => {
         quoteWrapper,
         callToActionWrapper
     );
+
+    const footer = document.querySelector("footer");
+    footer.classList.remove('footer--menu', 'footer--about');
+    footer.classList.add('footer--home');
 };
 
 export default homePage;
