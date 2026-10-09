@@ -135,3 +135,13 @@ main {
     align-items: center;
     background-color: #C08552;
 }
+
+.footer--about {
+    width: 100%;
+    justify-items: center;
+    font-size: 0.9rem;
+}
+
+.footer--about > div > a {
+    color: #000000;
+}
