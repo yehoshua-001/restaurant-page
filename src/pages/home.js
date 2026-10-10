@@ -9,16 +9,17 @@ const homePage = () => {
     const headlineWrapper = document.createElement("div");
     headlineWrapper.classList.add('headline-wrapper');
 
-    const headline = document.createElement("div");
-    headline.classList.add('headline');
-    headlineWrapper.appendChild(headline);
+    const headlineContainer = document.createElement("div");
+    headlineContainer.classList.add('headline-container');
+    headlineWrapper.appendChild(headlineContainer);
 
     const headlineLeft = document.createElement("div");
     headlineLeft.classList.add('headline-left');
-    headline.appendChild(headlineLeft);
+    headlineContainer.appendChild(headlineLeft);
 
     const heroText = document.createElement("p");
-    heroText.classList.add('hero-text');
+    heroText.classList.remove('hero-text--about');
+    heroText.classList.add('hero-text--home');
     heroText.innerHTML = `Kape at <br> Kulturang Vintage`;
     headlineLeft.appendChild(heroText);
 
@@ -36,7 +37,7 @@ const homePage = () => {
 
     const headlineRight = document.createElement("div");
     headlineRight.classList.add('headline-right');
-    headline.appendChild(headlineRight);
+    headlineContainer.appendChild(headlineRight);
 
     // Some info section
     const someInfoWrapper = document.createElement("div");
