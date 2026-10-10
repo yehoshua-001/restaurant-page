@@ -146,7 +146,7 @@ main {
     background-color: var(--bg);
 }
 
-.headline {
+.headline-container {
     width: 1200px;
     height: 600px;
     display: grid;
@@ -161,7 +161,7 @@ main {
     gap: 10px;
 }
 
-.hero-text {
+.hero-text--home {
     width: 15ch;
     font-size: 3.5rem;
     font-weight: 700;
