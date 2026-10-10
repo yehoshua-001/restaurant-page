@@ -21,7 +21,8 @@ const aboutPage = () => {
     heroWrapper.appendChild(heroContainer);
 
     const heroText = document.createElement("h1");
-    heroText.classList.add('hero-text');
+    heroText.classList.remove('hero-text--home');
+    heroText.classList.add('hero-text--about');
     heroText.innerHTML = `
         Sleepy to drive? Or looking for a unique coffee place?<br> 
         You are in the right place, coffee with us now!
