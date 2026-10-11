@@ -207,8 +207,8 @@ main {
     justify-items: center;
     align-content: center;
     row-gap: 50px;
-    padding-bottom: 50px;
-    background-color: var(--bg);
+    padding-block: 50px;
+    background-color: #FFFFFF;
 }
 
 .info-container--about {
@@ -248,7 +248,6 @@ main {
     grid-template: min-content max-content / 1fr;
     align-content: center;
     row-gap: 15px;
-    color: var(--maintext);
 }
 
 .place-title {
@@ -290,7 +289,6 @@ main {
     grid-template: min-content max-content / 1fr;
     align-content: center;
     row-gap: 15px;
-    color: var(--maintext);
 }
 
 .menu-title {
@@ -372,7 +370,7 @@ main {
     align-items: center;
     row-gap: 50px;
     padding-block: 50px;
-    background-color: #FFFFFF;
+    background-color: #EAD8C0;
 }
 
 .story-container {
@@ -435,7 +433,7 @@ main {
     align-items: center;
     row-gap: 50px;
     padding-block: 50px;
-    background-color: #EAD8C0;
+    background-color: #622F1B;
 }
 
 .values-container {
@@ -446,6 +444,7 @@ main {
     justify-items: center;
     align-content: center;
     gap: 30px;
+    color: var(--maintext);
 }
 
 .values-header {
@@ -470,6 +469,9 @@ main {
     display: grid;
     grid-template: repeat(2, max-content) / 1fr;
     row-gap: 10px;
+    padding: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
 }
 
 .value-title {
@@ -493,7 +495,7 @@ main {
     width: 100%;
     justify-items: center;
     font-size: 0.9rem;
-    background-color: #EAD8C0;
+    background-color: #622F1B;
 }
 
 .footer--about > div > a {
