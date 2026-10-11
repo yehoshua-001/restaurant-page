@@ -6,6 +6,7 @@ This project is a web-based restaurant site that features "page-switching websit
 <strong>Disclaimer</strong>: I based this project on an actual business which owns by relatives of mine.
 
 ## Demo
+https://github.com/user-attachments/assets/263b36d2-fae5-46c8-a53b-9b3079e01871 
 
 ## Sample Images
 <img src="./src/assets/tsuper-beetle-homepage.png" alt="home page sample image" width="1000px" height="auto"/>
