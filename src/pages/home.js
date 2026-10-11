@@ -5,6 +5,9 @@ const homePage = () => {
     content.classList.remove('content--menu', 'content--about');
     content.classList.add('content--home');
 
+    const home = document.querySelector("#home");
+    home.classList.add('button--home');
+
     // Headline section
     const headlineWrapper = document.createElement("div");
     headlineWrapper.classList.add('headline-wrapper');
