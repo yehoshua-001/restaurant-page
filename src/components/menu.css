@@ -109,15 +109,21 @@ header > div > nav {
     gap: 10px;
 }
 
-nav > button {
+nav button {
     border: none;
     background: none;
     cursor: pointer;
     color: var(--maintext);
 }
 
-nav > button:hover {
+nav button:hover {
     font-weight: 700;
+    color: #000000;
+}
+
+nav .button--menu {
+    font-weight: 700;
+    color: #000000;
 }
 
 main {
