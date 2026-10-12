@@ -23,9 +23,8 @@ Method 2
 1. Install the package via npm: `npm install github:yehoshua-001/restaurant-page`.
 2. The package is save in node_modules directory of npm by default, e.g: *node_modules/restaurant-page*.
 3. Open the directory *restaurant-page* in VSCode and run `npm install -D webpack-cli` in the terminal of directory.
-4. A. Run `npx webpack` and open the *dist* folder and open the **index.html** in your browser.<br>
+4. A. Run `npm start build` and open the *dist* folder and open the **index.html** in your browser.<br>
 B. Alternatively, you can open it through your localhost, in this case make sure you installed the **webpack dev server** via npm:<br>
-`npm install --save-dev webpack-dev-server` (source map is added by default in webpack.config.js).<br>
-B.1. Run `npx webpack serve` then open your localhost, it is http://localhost:8080/ by default<br>
-but you can check the output of the recent command and look for the **Loopback**.
+`npm install -D webpack-dev-server`.<br>
+B.1. Run `npm run start` and it will open in your browser automatically.
 
